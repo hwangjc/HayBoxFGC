@@ -12,8 +12,9 @@ This is a modified version of HayBox, designed for [B0XX](https://b0xx.com)-styl
 - [Smash Ultimate](#smash-ultimate)
 - [FGC Mode](#fgc-mode)
     - [Brook Wingman](#brook-wingman)
-    - [Pico bootsel mode](#pico-bootsel-mode)
+    
 - [Customisation](#customisation)
+    - [Pico bootsel mode](#pico-bootsel-mode) 
     - [Input modes](#input-modes)
     - [Creating custom input modes](#creating-custom-input-modes)
     - [SOCD](#socd)
