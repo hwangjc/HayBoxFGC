@@ -24,12 +24,13 @@ This is a modified version of HayBox, designed for [B0XX](https://b0xx.com)-styl
 
 ## Melee
 
-The layout for Melee mode can be seen below. To access Melee mode when you're in any other mode, hold:
+Layout for Melee mode
+
+To switch to Melee mode when you're in any other mode, hold:
 - Mod X + Start + L
+The recommended cable for playing Melee on a GameCube or Wii is the USB-C to GameCube cable.
+The recommended cable for playing Melee netplay is the USB-C to USB-A.
 
-
-
-  The recommended cable for playing Melee on a GameCube or Wii is the USB-C to GameCube cable.
 
 ### Dolphin/Slippi Setup
 
@@ -39,25 +40,28 @@ Once that's done, launch Dolphin. If you do not already have this set by default
 
 ## Smash Ultimate
 
-The layout for Smash Ultimate is the same as the Melee layout. To switch to Smash Ultimate mode if your controller isn't on it by default, press:
+Layout for Smash Ultimate mode
+
+To switch to Smash Ultimate mode when you're in any other mode, hold:
 - Mod X + Start + Down
 For more information on using your controller in Smash Ultimate, please see this [document](https://drive.google.com/file/d/1anxAtEFysxebQPwswDVV1d1qkWk1JwKB/view).
 
-The recommended way to play Smash Ultimate is to use the USB-C to GameCube cable and connect your controller to the Switch GameCube Adapter. 
+The recommended cable for playing Smash Ultimate is to use the USB-C to GameCube cable and connect your controller to the GameCube Adapter.
 
 ## FGC Mode
 
-To play FGC games on PC, you can use this layout. If you're not already in FGC Mode, press:
-- Mod X + Start + Right
-Use your USB-C to USB cable to plug in your controller. See the layout below:
+FGC layout
 
+To switch to FGC mode when you're in any other mode, hold:
+- Mod X + Start + Right
+The recommended cable for playing fighting games is the USB-C to USB-A cable.
 
 
 ### Brook Wingman
 
-If you choose to use a Brook Wingman to play on a console, hold down the X button on your controller as you plug in the controller (with the USB-C to USB cable already plugged in with the Brook Wingman). Below is the layout denoting which button to hold to activate Brook Wingman mode. Your layout should automatically be in FGC mode.
+To use a Brook Wingman to play on a console, hold down the button highlighted below on your controller as you plug in the controller (plug the cord and Wingman into the console before plugging into your controller with the button hold).
 
-#### Pico bootsel mode
+#### Flashing New Firmware
 
 To upload new versions of firmware for your controller, hold Start on plugin to your PC. A new folder should pop up in which you can drag and drop a new firmware .uf2 file into.
 
