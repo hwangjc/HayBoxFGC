@@ -23,16 +23,20 @@ void WingmanFgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outpu
     outputs.dpadUp = inputs.mod_x;
 
     // Menu keys
-    outputs.start = inputs.c_down;
     outputs.select = inputs.c_left;
-    outputs.home = inputs.start;
+    //function layer
+    if (inputs.mod_y){
+        outputs.home = inputs.start;
+    } else {
+        outputs.start = inputs.start;
+    }
     outputs.leftStickClick = inputs.a;
     outputs.rightStickClick = inputs.c_up;
 
 
     // Right hand bottom row    
     outputs.a = inputs.x;
-    outputs.b = inputs.b;
+    outputs.b = inputs.b; // swapped because of a wingman oddity
     outputs.triggerRDigital = inputs.z;
     outputs.triggerLDigital = inputs.up;
 
