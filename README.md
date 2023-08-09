@@ -56,6 +56,7 @@ FGC layout
 
 To switch to FGC mode when you're in any other mode, hold:
 - Mod X + Start + Right
+  
 The recommended cable for playing fighting games is the USB-C to USB-A cable.
 
 
@@ -63,11 +64,12 @@ The recommended cable for playing fighting games is the USB-C to USB-A cable.
 
 To use a Brook Wingman to play on a console, hold down the button highlighted below on your controller as you plug in the controller (plug the cord and Wingman into the console before plugging into your controller with the button hold).
 
+
+## Customisation
+
 #### Flashing New Firmware
 
 To upload new versions of firmware for your controller, hold Start on plugin to your PC. A new folder should pop up in which you can drag and drop a new firmware .uf2 file into.
-
-## Customisation
 
 #### Input modes
 
