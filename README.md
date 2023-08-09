@@ -28,6 +28,7 @@ Layout for Melee mode
 
 To switch to Melee mode when you're in any other mode, hold:
 - Mod X + Start + L
+  
 The recommended cable for playing Melee on a GameCube or Wii is the USB-C to GameCube cable.
 The recommended cable for playing Melee netplay is the USB-C to USB-A.
 
@@ -44,6 +45,7 @@ Layout for Smash Ultimate mode
 
 To switch to Smash Ultimate mode when you're in any other mode, hold:
 - Mod X + Start + Down
+  
 For more information on using your controller in Smash Ultimate, please see this [document](https://drive.google.com/file/d/1anxAtEFysxebQPwswDVV1d1qkWk1JwKB/view).
 
 The recommended cable for playing Smash Ultimate is to use the USB-C to GameCube cable and connect your controller to the GameCube Adapter.
