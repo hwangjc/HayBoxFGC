@@ -25,6 +25,8 @@ This is a modified version of HayBox, designed for [B0XX](https://b0xx.com)-styl
 
 ## Melee
 
+<img src=".github/images/default.png" alt="Melee Layout" />
+
 Layout for Melee mode
 
 To switch to Melee mode when you're in any other mode, hold:
@@ -42,7 +44,7 @@ Once that's done, launch Dolphin. If you do not already have this set by default
 
 ## Smash Ultimate
 
-Layout for Smash Ultimate mode
+The layout for Smash Ultimate mode is the same as Melee mode, except MS and LS are disabled.
 
 To switch to Smash Ultimate mode when you're in any other mode, hold:
 - Mod X + Start + Down
@@ -52,6 +54,8 @@ For more information on using your controller in Smash Ultimate, please see this
 The recommended cable for playing Smash Ultimate is to use the USB-C to GameCube cable and connect your controller to the GameCube Adapter.
 
 ## FGC Mode
+
+<img src=".github/images/fgc_layout.png" alt="FGC Layout" />
 
 FGC layout
 
@@ -65,6 +69,7 @@ The recommended cable for playing fighting games is the USB-C to USB-A cable.
 
 To use a Brook Wingman to play on a console, hold down the button highlighted below on your controller as you plug in the controller (plug the cord and Wingman into the console before plugging into your controller with the button hold).
 
+<img src=".github/images/wingman_button.png" alt="Wingman" />
 
 ## Customisation
 
