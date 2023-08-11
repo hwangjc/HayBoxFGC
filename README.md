@@ -93,6 +93,7 @@ To use a Brook Wingman to play fighting games on a console, hold down the button
 
 ## Smash 64
 
+<img src=".github/images/64.png" alt="Smash 64 Layout" />
 Smash 64 Layout
 
 To switch to Smash 64 when you're in any other mode, hold: 
