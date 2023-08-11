@@ -23,6 +23,7 @@ Major changes from HayBox:
 - [FGC Mode](#fgc-mode)
     - [Brook Wingman](#brook-wingman)
 - [Smash 64](#smash-64)
+    - [Emulator Setup](#emulator-setup)
     - [Experimental Smash 64 Layout](#experimental-smash-64-layout)
 - [Customisation](#customisation)
     - [Flashing New Firmware](#flashing-new-firmware)
@@ -32,6 +33,7 @@ Major changes from HayBox:
     - [Mod X lightshield and R shield tilt](#mod-x-lightshield-and-r-shield-tilt)
     - [Mode-specific optional features](#mode-specific-optional-features)
 - [License](#license)
+
 
 
 
@@ -99,7 +101,10 @@ Smash 64 Layout
 To switch to Smash 64 when you're in any other mode, hold: 
 - Mod X + Start + X
 
-  By default, this is the layout your controller starts with upon plugging into a Nintendo 64. The recommended cable for playing Smash 64 on console is the USB-C to N64 cable. The recommended cable for playing Smash 64 on PC is the USB-C to USB-A cable. You will need to manually map the controls on the emulator your first time playing. For more information, follow the guide linked [here](https://smash64.online/gamecube/).
+  By default, this is the layout your controller starts with upon plugging into a Nintendo 64. The recommended cable for playing Smash 64 on console is the USB-C to N64 cable.
+
+### Emulator Setup
+The recommended cable for playing Smash 64 on PC is the USB-C to USB-A cable. You will need to manually map the controls on the emulator your first time playing. For more information, follow the guide linked [here](https://smash64.online/gamecube/).
   
 ### Experimental Smash 64 Layout
 
