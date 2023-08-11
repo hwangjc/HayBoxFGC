@@ -12,6 +12,7 @@ class Smash64Mod : public ControllerMode {
   private:
     void UpdateDigitalOutputs(InputState &inputs, OutputState &outputs);
     void UpdateAnalogOutputs(InputState &inputs, OutputState &outputs);
+
 };
 
 #endif

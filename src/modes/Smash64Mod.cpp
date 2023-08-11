@@ -1,22 +1,19 @@
 
-#include "modes/Smash64.hpp"
+#include "modes/Smash64Mod.hpp"
 
 #define ANALOG_STICK_MIN 48
 #define ANALOG_STICK_NEUTRAL 128
 #define ANALOG_STICK_MAX 208
 
-Smash64::Smash64(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
+Smash64Mod::Smash64Mod(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
     _socd_pair_count = 4;
     _socd_pairs = new socd::SocdPair[_socd_pair_count]{
         socd::SocdPair{&InputState::left,   &InputState::right, horizontal_socd         },
-
-        socd::SocdPair{ &InputState::mod_x, &InputState::c_up,  socd::SOCD_DIR1_PRIORITY},
-        socd::SocdPair{ &InputState::down,  &InputState::mod_x, vertical_socd           },
-        socd::SocdPair{ &InputState::down,  &InputState::c_up,  vertical_socd           },
+        socd::SocdPair{ &InputState::down,  &InputState::up,  vertical_socd           },
     };
 }
 
-void Smash64::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
+void Smash64Mod::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.a = inputs.a;
     outputs.b = inputs.b;
 
@@ -44,7 +41,7 @@ void Smash64::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
         outputs.dpadRight = true;
 }
 
-void Smash64::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
+void Smash64Mod::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
     // Coordinate calculations to make modifier handling simpler.
     UpdateDirections(
         inputs.left,
@@ -61,7 +58,7 @@ void Smash64::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
         outputs
     );
 
-    bool shield_button_pressed = inputs.l || inputs.r || inputs.lightshield || inputs.midshield;
+    bool shield_button_pressed = inputs.r || inputs.z;
     if (directions.diagonal) {
         // q1/2 = 7000 7000
         outputs.leftStickX = 128 + (directions.x * 56);
@@ -237,11 +234,5 @@ void Smash64::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
     if ((inputs.mod_x && inputs.mod_y) || inputs.nunchuk_c) {
         outputs.rightStickX = 128;
         outputs.rightStickY = 128;
-    }
-
-    // Nunchuk overrides left stick.
-    if (inputs.nunchuk_connected) {
-        outputs.leftStickX = inputs.nunchuk_x;
-        outputs.leftStickY = inputs.nunchuk_y;
     }
 }

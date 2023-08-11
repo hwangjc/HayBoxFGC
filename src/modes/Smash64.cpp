@@ -9,10 +9,7 @@ Smash64::Smash64(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
     _socd_pair_count = 4;
     _socd_pairs = new socd::SocdPair[_socd_pair_count]{
         socd::SocdPair{&InputState::left,   &InputState::right, horizontal_socd         },
-
-        socd::SocdPair{ &InputState::mod_x, &InputState::c_up,  socd::SOCD_DIR1_PRIORITY},
-        socd::SocdPair{ &InputState::down,  &InputState::mod_x, vertical_socd           },
-        socd::SocdPair{ &InputState::down,  &InputState::c_up,  vertical_socd           },
+        socd::SocdPair{ &InputState::down,  &InputState::up,  vertical_socd           },
     };
 }
 
@@ -63,7 +60,7 @@ void Smash64::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
         outputs
     );
 
-    bool shield_button_pressed = inputs.l || inputs.r || inputs.lightshield || inputs.midshield;
+    bool shield_button_pressed = inputs.z || inputs.r;
     if (directions.diagonal) {
         // q1/2 = 7000 7000
         outputs.leftStickX = 128 + (directions.x * 56);
