@@ -54,9 +54,9 @@ To set up your controller to play on Slippi, download the HayBox Slippi Profile 
 
 Once that's done, launch Dolphin. If you do not already have this set by default, go to "Game" in the Slippi launcher settings, and click on "Launch Dolphin". Close that and click the Play button on the main window of the Slippi Launcher. From Dolphin, click on "Controllers", click "Configure" for port 1 (Standard Controller), and under Profile, HayBox should be listed. Click on HayBox, load and save it. For more detailed instructions, see the original HayBox repo. 
 
-## Project M/P+
+## Project M/Project+
 
-The layout for Project M/P+ is the same as Melee mode. To switch to PM/P+ mode, hold:
+The layout for Project M/Project+ is the same as Melee mode. To switch to PM/Project+ mode, hold:
 - Mod X + Left + Start
 
 The recommended cable for playing Melee on a Wii is the USB-C to GameCube cable.
