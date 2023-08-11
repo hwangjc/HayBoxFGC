@@ -1,18 +1,18 @@
 #include "modes/WingmanFgcMode.hpp"
 
-WingmanFgcMode::WingmanFgcMode(socd::SocdType socd_type) : ControllerMode(socd_type) {
-    _socd_pair_count = 1;
+WingmanFgcMode::WingmanFgcMode(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
+    _socd_pair_count = 4;
     _socd_pairs = new socd::SocdPair[_socd_pair_count]{
-        socd::SocdPair{&InputState::left, &InputState::right},
+        socd::SocdPair{&InputState::left,   &InputState::right, horizontal_socd         },
+/* Mod X override C-Up input if both are pressed. Without this, neutral SOCD doesn't work
+  properly if Down and both Up buttons are pressed, because it first resolves Down + Mod X
+  to set both as unpressed, and then it sees C-Up as pressed but not Down, so you get an up
+  input instead of neutral. 
+        Uncomment line 14 if we use c_up as up and comment out line 13
+  */
+        socd::SocdPair{ &InputState::down,  &InputState::mod_x, vertical_socd           },
+        //socd::SocdPair{ &InputState::down,  &InputState::c_up,  vertical_socd           },
     };
-}
-
-void WingmanFgcMode::HandleSocd(InputState &inputs) {
-    if (inputs.down && (inputs.mod_x)) {
-        inputs.down = false;
-        inputs.mod_x = false;
-    }
-    InputMode::HandleSocd(inputs);
 }
 
 void WingmanFgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {

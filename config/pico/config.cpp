@@ -15,7 +15,13 @@
 #include "input/NunchukInput.hpp"
 #include "joybus_utils.hpp"
 #include "modes/Melee20Button.hpp"
+#include "modes/ProjectM.hpp"
+#include "modes/Smash64.hpp"
+#include "modes/WingmanFgcMode.hpp"
+#include "modes/Ultimate.hpp"
+#include "modes/FgcMode.hpp"
 #include "stdlib.hpp"
+
 
 #include <pico/bootrom.h>
 
@@ -94,9 +100,8 @@ void setup() {
             backend_count = 1;
             primary_backend = new NintendoSwitchBackend(input_sources, input_source_count);
             backends = new CommunicationBackend *[backend_count] { primary_backend };
-
             // Default to Wingman FGC mode upon plugin to Brook Wingman.
-            primary_backend->SetGameMode(new WingmanFgcMode(socd::SOCD_NEUTRAL));
+            primary_backend->SetGameMode(new WingmanFgcMode(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL));
             return;
         } else if (button_holds.z) {
             // If no console detected and Z is held on plugin then use DInput backend.
@@ -114,13 +119,21 @@ void setup() {
             backends = new CommunicationBackend *[backend_count] {
                 primary_backend, new B0XXInputViewer(input_sources, input_source_count)
             };
+            primary_backend->SetGameMode(
+                new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = true })
+            );
         }
     } else {
         if (console == ConnectedConsole::GAMECUBE) {
             primary_backend =
                 new GamecubeBackend(input_sources, input_source_count, pinout.joybus_data);
+                primary_backend->SetGameMode(
+                    new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = true })
+                );
         } else if (console == ConnectedConsole::N64) {
             primary_backend = new N64Backend(input_sources, input_source_count, pinout.joybus_data);
+            primary_backend->SetGameMode(new Smash64(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL));
+
         }
 
         // If console then only using 1 backend (no input viewer).
@@ -129,9 +142,7 @@ void setup() {
     }
 
     // Default to Melee mode.
-    primary_backend->SetGameMode(
-        new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = true })
-    );
+    
 }
 
 void loop() {
