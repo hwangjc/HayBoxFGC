@@ -18,7 +18,7 @@ Major changes from HayBox:
 
 - [Melee](#melee)
     - [Dolphin/Slippi Setup](#dolphinslippi-setup)
-- [Project M/P+](#project-mp)
+- [Project M/Project+](#project-mproject)
 - [Smash Ultimate](#smash-ultimate)
 - [FGC Mode](#fgc-mode)
     - [Brook Wingman](#brook-wingman)
@@ -27,12 +27,13 @@ Major changes from HayBox:
     - [Experimental Smash 64 Layout](#experimental-smash-64-layout)
 - [Customisation](#customisation)
     - [Flashing New Firmware](#flashing-new-firmware)
-    - [Input modes](#input-modes)
-    - [Creating custom input modes](#creating-custom-input-modes)
+    - [Input Modes](#input-modes)
+    - [Creating Custom Input Modes](#creating-custom-input-modes)
     - [SOCD](#socd)
-    - [Mod X lightshield and R shield tilt](#mod-x-lightshield-and-r-shield-tilt)
-    - [Mode-specific optional features](#mode-specific-optional-features)
+    - [Mod X Lightshield and R Shield Tilt](#mod-x-lightshield-and-r-shield-tilt)
+    - [Mode-specific Optional Features](#mode-specific-optional-features)
 - [License](#license)
+
 
 
 ## Melee
