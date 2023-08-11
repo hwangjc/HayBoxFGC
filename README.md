@@ -2,6 +2,15 @@
 
 This is a modified version of HayBox, designed for [B0XX](https://b0xx.com)-style controllers. It includes a Brook Wingman compatible mode and CPT compliant SOCD in the FGC modes. This readme will cover the main differences and FAQs for our users. For more information about HayBox, please visit [the HayBox repo.](https://github.com/JonnyHaystack/HayBox)
 
+Major changes from HayBox:
+
+- Brook Wingman FGC mode layout, which is automatically booted into from plugin by a buttonhold
+- Function key in FGC mode to prevent accidental access of the Home button
+- Addition of L3 and R3 buttons in FGC mode
+- Removal of double Up inputs to comply with CPT ruleset
+- Tournament legal Smash 64 layout, which is automatically booted on plugin to an N64
+- Experimental Smash 64 layout with analog modifiers
+
 [![GitHub issues](https://img.shields.io/github/issues/JonnyHaystack/HayBox)](https://github.com/JonnyHaystack/HayBox/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/JonnyHaystack/HayBox)](https://github.com/JonnyHaystack/HayBox/pulls)
 
@@ -9,18 +18,21 @@ This is a modified version of HayBox, designed for [B0XX](https://b0xx.com)-styl
 
 - [Melee](#melee)
     - [Dolphin/Slippi Setup](#dolphinslippi-setup)
+- [Project M/P+](#project-mp)
 - [Smash Ultimate](#smash-ultimate)
 - [FGC Mode](#fgc-mode)
     - [Brook Wingman](#brook-wingman)
-    
+- [Smash 64](#smash-64)
+    - [Experimental Smash 64 Layout](#experimental-smash-64-layout)
 - [Customisation](#customisation)
-    - [Pico bootsel mode](#pico-bootsel-mode) 
+    - [Flashing New Firmware](#flashing-new-firmware)
     - [Input modes](#input-modes)
     - [Creating custom input modes](#creating-custom-input-modes)
     - [SOCD](#socd)
     - [Mod X lightshield and R shield tilt](#mod-x-lightshield-and-r-shield-tilt)
     - [Mode-specific optional features](#mode-specific-optional-features)
 - [License](#license)
+
 
 
 ## Melee
@@ -42,6 +54,14 @@ To set up your controller to play on Slippi, download the HayBox Slippi Profile 
 
 Once that's done, launch Dolphin. If you do not already have this set by default, go to "Game" in the Slippi launcher settings, and click on "Launch Dolphin". Close that and click the Play button on the main window of the Slippi Launcher. From Dolphin, click on "Controllers", click "Configure" for port 1 (Standard Controller), and under Profile, HayBox should be listed. Click on HayBox, load and save it. For more detailed instructions, see the original HayBox repo. 
 
+## Project M/P+
+
+The layout for Project M/P+ is the same as Melee mode. To switch to PM/P+ mode, hold:
+- Mod X + Left + Start
+
+The recommended cable for playing Melee on a Wii is the USB-C to GameCube cable.
+The recommended cable for playing Melee netplay is the USB-C to USB-A.
+
 ## Smash Ultimate
 
 The layout for Smash Ultimate mode is the same as Melee mode, except MS and LS are disabled.
@@ -51,7 +71,7 @@ To switch to Smash Ultimate mode when you're in any other mode, hold:
   
 For more information on using your controller in Smash Ultimate, please see this [document](https://drive.google.com/file/d/1anxAtEFysxebQPwswDVV1d1qkWk1JwKB/view).
 
-The recommended cable for playing Smash Ultimate is to use the USB-C to GameCube cable and connect your controller to the GameCube Adapter.
+The recommended cable for playing Smash Ultimate is to use the USB-C to GameCube cable to connect your controller to the GameCube Adapter.
 
 ## FGC Mode
 
@@ -67,9 +87,29 @@ The recommended cable for playing fighting games is the USB-C to USB-A cable.
 
 ### Brook Wingman
 
-To use a Brook Wingman to play on a console, hold down the button highlighted below on your controller as you plug in the controller (plug the cord and Wingman into the console before plugging into your controller with the button hold).
+To use a Brook Wingman to play fighting games on a console, hold down the button highlighted below on your controller as you plug in the controller (plug the cord and Wingman into the console before plugging into your controller with the button hold).
 
 <img src=".github/images/wingman_button.png" alt="Wingman" />
+
+## Smash 64
+
+Smash 64 Layout
+
+To switch to Smash 64 when you're in any other mode, hold: 
+- Mod X + Start + X
+
+  By default, this is the layout your controller starts with upon plugging into a Nintendo 64. The recommended cable for playing Smash 64 on console is the USB-C to N64 cable. The recommended cable for playing Smash 64 on PC is the USB-C to USB-A cable. You will need to manually map the controls on the emulator your first time playing. For more information, follow the guide linked [here](https://smash64.online/gamecube/).
+  
+### Experimental Smash 64 Layout
+
+<img src=".github/images/64_mod.png" alt="Experimental Smash 64 Layout" />
+Experimental Smash 64 Layout
+
+To switch to the experimental Smash 64 layout when you're in any other mode, hold:
+- Mod X + Start + Y
+
+This is an experimental Smash 64 mode with modifiers similar to Melee and Ultimate mode. Before using this in tournament, be sure to ask your TO if this is allowed. The recommended cable for playing Smash 64 on console is the USB-C to N64 cable. 
+  
 
 ## Customisation
 
