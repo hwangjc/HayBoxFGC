@@ -23,10 +23,15 @@ void Melee20Button::HandleSocd(InputState &inputs) {
 }
 
 void Melee20Button::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
+    outputs.y = inputs.y;
     outputs.a = inputs.a;
+    /* peach layout. uncomment line 64 to make outputs.up = inputs.z and comment out line 65
+    outputs.b = inputs.x;
+    outputs.x = inputs.up;
+    outputs.buttonR = inputs.b;
+    */
     outputs.b = inputs.b;
     outputs.x = inputs.x;
-    outputs.y = inputs.y;
     outputs.buttonR = inputs.z;
     if (inputs.nunchuk_connected) {
         outputs.triggerLDigital = inputs.nunchuk_z;
@@ -56,6 +61,7 @@ void Melee20Button::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs
         inputs.left,
         inputs.right,
         inputs.down,
+        //inputs.z, //peach layout up
         inputs.up,
         inputs.c_left,
         inputs.c_right,

@@ -120,7 +120,7 @@ void setup() {
                 primary_backend, new B0XXInputViewer(input_sources, input_source_count)
             };
             primary_backend->SetGameMode(
-                new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = true })
+                new Melee20Button(socd::SOCD_NEUTRAL, { .crouch_walk_os = true })
             );
         }
     } else {
@@ -128,7 +128,7 @@ void setup() {
             primary_backend =
                 new GamecubeBackend(input_sources, input_source_count, pinout.joybus_data);
                 primary_backend->SetGameMode(
-                    new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = true })
+                    new Melee20Button(socd::SOCD_NEUTRAL, { .crouch_walk_os = true })
                 );
         } else if (console == ConnectedConsole::N64) {
             primary_backend = new N64Backend(input_sources, input_source_count, pinout.joybus_data);
