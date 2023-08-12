@@ -40,6 +40,7 @@ void ProjectM::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     }
     outputs.triggerRDigital = inputs.r;
     outputs.start = inputs.start;
+    outputs.dpadDown = inputs.midshield;
 
     // Activate D-Pad layer by holding Mod X + Mod Y or Nunchuk C button.
     if ((inputs.mod_x && inputs.mod_y) || inputs.nunchuk_c) {
