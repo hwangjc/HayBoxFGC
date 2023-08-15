@@ -121,6 +121,7 @@ void setup() {
             };
             primary_backend->SetGameMode(
                 new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = true })
+                //new FgcMode(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL)
             );
         }
     } else {
@@ -129,6 +130,7 @@ void setup() {
                 new GamecubeBackend(input_sources, input_source_count, pinout.joybus_data);
                 primary_backend->SetGameMode(
                     new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = true })
+                    //new Ultimate(socd::SOCD_2IP)
                 );
         } else if (console == ConnectedConsole::N64) {
             primary_backend = new N64Backend(input_sources, input_source_count, pinout.joybus_data);
