@@ -9,8 +9,8 @@ Major changes from HayBox:
 - Addition of L3 and R3 buttons in FGC mode
 - Removal of double Up inputs to comply with CPT ruleset
 - Tournament legal Smash 64 layout, which is automatically booted on plugin to an N64
-- Experimental Smash 64 layout with analog modifiers
-
+- Options such as WASD and ATB's Peach Layout commented out in the code
+  
 [![GitHub issues](https://img.shields.io/github/issues/JonnyHaystack/HayBox)](https://github.com/JonnyHaystack/HayBox/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/JonnyHaystack/HayBox)](https://github.com/JonnyHaystack/HayBox/pulls)
 
@@ -104,16 +104,6 @@ To switch to Smash 64 when you're in any other mode, hold:
 
 ### Emulator Setup
 The recommended cable for playing Smash 64 on PC is the USB-C to USB-A cable. You will need to manually map the controls on the emulator your first time playing. For more information, follow the guide linked [here](https://smash64.online/gamecube/).
-  
-### Experimental Smash 64 Layout
-
-<img src=".github/images/64_mod.png" alt="Experimental Smash 64 Layout" />
-Experimental Smash 64 Layout
-
-To switch to the experimental Smash 64 layout when you're in any other mode, hold:
-- Mod X + Start + Y
-
-This is an experimental Smash 64 mode with modifiers similar to Melee and Ultimate mode. Before using this in tournament, be sure to ask your TO if this is allowed. The recommended cable for playing Smash 64 on console is the USB-C to N64 cable. 
   
 
 ## Customisation
