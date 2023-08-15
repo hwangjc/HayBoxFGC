@@ -14,6 +14,7 @@ typedef struct inputstate {
     bool c_right = false;
     bool c_down = false;
     bool c_up = false;
+    bool w = false;
     bool a = false;
     bool b = false;
     bool x = false;

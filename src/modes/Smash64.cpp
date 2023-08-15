@@ -10,6 +10,8 @@ Smash64::Smash64(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
     _socd_pairs = new socd::SocdPair[_socd_pair_count]{
         socd::SocdPair{&InputState::left,   &InputState::right, horizontal_socd         },
         socd::SocdPair{ &InputState::down,  &InputState::up,  vertical_socd           },
+        //If using WASD, uncomment the below line and comment the above line
+        //socd::SocdPair{ &InputState::down,   &InputState::w, vertical_socd        },
     };
 }
 
@@ -29,8 +31,9 @@ void Smash64::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
 
     outputs.start = inputs.start;
 
-    // Activate D-Pad layer by holding Mod X + Mod Y or Nunchuk C button.
-    if ((inputs.mod_x && inputs.mod_y) || inputs.nunchuk_c) {
+     // Activate D-Pad layer by holding Mod X + Mod Y or Nunchuk C button. 
+    // Remove inputs.w if using that as Up.
+    if ((inputs.mod_x && inputs.mod_y) || inputs.nunchuk_c || inputs.w) {
         outputs.dpadUp = inputs.c_up;
         outputs.dpadDown = inputs.c_down;
         outputs.dpadLeft = inputs.c_left;
@@ -49,7 +52,7 @@ void Smash64::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
         inputs.left,
         inputs.right,
         inputs.down,
-        inputs.up,
+        inputs.up, // replace with inputs.w if using WASD
         inputs.c_left,
         inputs.y, //y now acts as c-right
         inputs.mod_x, //mod X now acts as c-down

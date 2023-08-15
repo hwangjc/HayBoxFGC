@@ -9,6 +9,8 @@ Melee18Button::Melee18Button(socd::SocdType socd_type, Melee18ButtonOptions opti
     _socd_pairs = new socd::SocdPair[_socd_pair_count]{
         socd::SocdPair{&InputState::left,    &InputState::right,   socd_type},
         socd::SocdPair{ &InputState::down,   &InputState::up,      socd_type},
+        //If using WASD, uncomment the below line and comment the above line
+        //socd::SocdPair{ &InputState::down,   &InputState::w     },
         socd::SocdPair{ &InputState::c_left, &InputState::c_right, socd_type},
         socd::SocdPair{ &InputState::c_down, &InputState::c_up,    socd_type},
     };
@@ -60,7 +62,7 @@ void Melee18Button::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs
         inputs.left,
         inputs.right,
         inputs.down,
-        inputs.up,
+        inputs.up, // replace with inputs.w if using WASD
         inputs.c_left,
         inputs.c_right,
         inputs.c_down,

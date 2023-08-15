@@ -9,6 +9,8 @@ ProjectM::ProjectM(socd::SocdType socd_type, ProjectMOptions options) {
     _socd_pairs = new socd::SocdPair[_socd_pair_count]{
         socd::SocdPair{&InputState::left,    &InputState::right,   socd_type},
         socd::SocdPair{ &InputState::down,   &InputState::up,      socd_type},
+        //If using WASD, uncomment the below line and comment the above line
+        //socd::SocdPair{ &InputState::down,   &InputState::w     },
         socd::SocdPair{ &InputState::c_left, &InputState::c_right, socd_type},
         socd::SocdPair{ &InputState::c_down, &InputState::c_up,    socd_type},
     };
@@ -42,8 +44,9 @@ void ProjectM::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.start = inputs.start;
     outputs.dpadDown = inputs.midshield;
 
-    // Activate D-Pad layer by holding Mod X + Mod Y or Nunchuk C button.
-    if ((inputs.mod_x && inputs.mod_y) || inputs.nunchuk_c) {
+    // Activate D-Pad layer by holding Mod X + Mod Y or Nunchuk C button. 
+    // Remove inputs.w if using that as Up.
+    if ((inputs.mod_x && inputs.mod_y) || inputs.nunchuk_c || inputs.w) {
         outputs.dpadUp = inputs.c_up;
         outputs.dpadDown = inputs.c_down;
         outputs.dpadLeft = inputs.c_left;
@@ -65,7 +68,7 @@ void ProjectM::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
         inputs.left,
         inputs.right,
         inputs.down,
-        inputs.up,
+        inputs.up, // replace with inputs.w if using WASD
         inputs.c_left,
         inputs.c_right,
         inputs.c_down,

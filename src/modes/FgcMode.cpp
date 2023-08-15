@@ -12,6 +12,9 @@ FgcMode::FgcMode(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
   */
         socd::SocdPair{ &InputState::down,  &InputState::mod_x, vertical_socd           },
         //socd::SocdPair{ &InputState::down,  &InputState::c_up,  vertical_socd           },
+
+        //If using WASD, uncomment the below line and comment the above lines
+        //socd::SocdPair{ &InputState::down,   &InputState::w, vertical_socd     },
     };
 }
 
@@ -21,6 +24,7 @@ void FgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.dpadRight = inputs.right;
     outputs.dpadDown = inputs.down;
     outputs.dpadUp = inputs.mod_x;
+    //outputs.dpadUp = inputs.w
 
     // Menu keys
     outputs.select = inputs.c_left;
