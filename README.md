@@ -59,6 +59,7 @@ Once that's done, launch Dolphin. If you do not already have this set by default
 
 ## Project M/Project+
 <img src=".github/images/pm.png" alt="PM/P+ Layout" />
+
 Layout for Project M/Project+ mode
 
 To switch to Project M/Project+ mode, hold:
