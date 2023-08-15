@@ -10,7 +10,6 @@
 #include "modes/Ultimate.hpp"
 #include "modes/WingmanFgcMode.hpp"
 #include "modes/Smash64.hpp"
-#include "modes/Smash64Mod.hpp"
 
 extern KeyboardMode *current_kb_mode;
 
@@ -61,9 +60,6 @@ void select_mode(CommunicationBackend *backend) {
         /* else if (inputs.y){
             set_mode(backend, new Smash64Mod(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL));
         } */
-    } else if (inputs.right && inputs.mod_y && !inputs.mod_x && inputs.start) {
-        set_mode(backend, new FgcMode(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL)); 
-        //never want to have a main mode you can't get back to
     } else if (inputs.mod_y && !inputs.mod_x && inputs.start) {
         if (inputs.l) {
             set_mode(backend, new DefaultKeyboardMode(socd::SOCD_2IP));
