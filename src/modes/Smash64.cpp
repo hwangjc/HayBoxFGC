@@ -6,7 +6,7 @@
 #define ANALOG_STICK_MAX 208
 
 Smash64::Smash64(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
-    _socd_pair_count = 4;
+    _socd_pair_count = 2;
     _socd_pairs = new socd::SocdPair[_socd_pair_count]{
         socd::SocdPair{&InputState::left,   &InputState::right, horizontal_socd         },
         socd::SocdPair{ &InputState::down,  &InputState::up,  vertical_socd           },

@@ -57,9 +57,10 @@ void select_mode(CommunicationBackend *backend) {
             set_mode(backend, new RivalsOfAether(socd::SOCD_2IP));
         } else if (inputs.x){
             set_mode(backend, new Smash64(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL));
-        } else if (inputs.y){
+        } 
+        /* else if (inputs.y){
             set_mode(backend, new Smash64Mod(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL));
-        }
+        } */
     } else if (inputs.right && inputs.mod_y && !inputs.mod_x && inputs.start) {
         set_mode(backend, new FgcMode(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL)); 
         //never want to have a main mode you can't get back to

@@ -1,3 +1,4 @@
+
 #ifndef _MODES_SMASH64MOD_HPP
 #define _MODES_SMASH64MOD_HPP
 
