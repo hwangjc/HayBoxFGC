@@ -10,9 +10,6 @@ Major changes from HayBox:
 - Removal of double Up inputs to comply with CPT ruleset
 - Tournament legal Smash 64 layout, which is automatically booted on plugin to an N64
 - Options such as WASD and ATB's Peach Layout commented out in the code
-  
-[![GitHub issues](https://img.shields.io/github/issues/JonnyHaystack/HayBox)](https://github.com/JonnyHaystack/HayBox/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/JonnyHaystack/HayBox)](https://github.com/JonnyHaystack/HayBox/pulls)
 
 ## Table of Contents
 
@@ -24,15 +21,20 @@ Major changes from HayBox:
     - [Brook Wingman](#brook-wingman)
 - [Smash 64](#smash-64)
     - [Emulator Setup](#emulator-setup)
-    - [Experimental Smash 64 Layout](#experimental-smash-64-layout)
 - [Customisation](#customisation)
     - [Flashing New Firmware](#flashing-new-firmware)
+    - [Layouts](#layouts)
+        - [ATB Peach Layout](#atb-peach-layout)
+        - [WASD](#wasd)
     - [Input Modes](#input-modes)
     - [Creating Custom Input Modes](#creating-custom-input-modes)
     - [SOCD](#socd)
     - [Mod X Lightshield and R Shield Tilt](#mod-x-lightshield-and-r-shield-tilt)
     - [Mode-specific Optional Features](#mode-specific-optional-features)
+        - [Melee Modes](#melee-modes)
+        - [Project M/Project+ Mode](#project-mproject-mode)
 - [License](#license)
+
 
 
 
@@ -56,8 +58,11 @@ To set up your controller to play on Slippi, download the HayBox Slippi Profile 
 Once that's done, launch Dolphin. If you do not already have this set by default, go to "Game" in the Slippi launcher settings, and click on "Launch Dolphin". Close that and click the Play button on the main window of the Slippi Launcher. From Dolphin, click on "Controllers", click "Configure" for port 1 (Standard Controller), and under Profile, HayBox should be listed. Click on HayBox, load and save it. For more detailed instructions, see the original HayBox repo. 
 
 ## Project M/Project+
+<img src=".github/images/pm.png" alt="PM/P+ Layout" />
 
-The layout for Project M/Project+ is the same as Melee mode. To switch to PM/Project+ mode, hold:
+Layout for Project M/Project+ mode
+
+To switch to Project M/Project+ mode, hold:
 - Mod X + Left + Start
 
 The recommended cable for playing Melee on a Wii is the USB-C to GameCube cable.
@@ -108,11 +113,29 @@ The recommended cable for playing Smash 64 on PC is the USB-C to USB-A cable. Yo
 
 ## Customisation
 
-#### Flashing New Firmware
+### Flashing New Firmware
 
-To upload new versions of firmware for your controller, hold Start on plugin to your PC. A new folder should pop up in which you can drag and drop a new firmware .uf2 file into.
+To upload new versions of firmware for your controller, hold Start on plugin to your PC. A new folder should pop up in which you can drag and drop a new firmware .uf2 file into.r3
 
-#### Input modes
+### Layouts
+
+
+
+#### ATB Peach Layout
+
+There is a modified layout for Peach by ATB.
+
+It changes the default right hand home row from B-X-Z-Up to X-Up-B-Z.
+This makes DJCs and subfloats easier than the default layout while this even has the same timing as wavedashing.
+Peach doesn't need to L-cancel as often as other characters (with Z) and B (for Up-Bs) is still in a comfortable position.
+
+This is done without compromising ergonomics since it's only a rearrangement within the home row and doesn't cause you to cross rows.
+
+#### WASD
+
+Code for WASD directional buttons, if your controller supports it, is inside each of the modes' files. Follow the directions to uncomment WASD and comment out Up inputs accordingly.
+
+### Input modes
 
 To configure the button holds for input modes (controller/keyboard modes), edit
 the `select_mode()` function in `config/mode_selection.hpp`. Each `if`
