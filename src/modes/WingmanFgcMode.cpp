@@ -30,7 +30,7 @@ void WingmanFgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outpu
     } else {
         outputs.start = inputs.start;
     }
-    outputs.leftStickClick = inputs.a;
+    outputs.leftStickClick = inputs.l;
     outputs.rightStickClick = inputs.c_up;
 
 
