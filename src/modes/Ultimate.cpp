@@ -30,6 +30,9 @@ void Ultimate::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.start = inputs.start;
     outputs.select = inputs.select;
     outputs.home = inputs.home;
+    
+    outputs.dpadDown = inputs.lightshield;
+    outputs.dpadUp = inputs.midshield;
 
     // Turn on D-Pad layer by holding Mod X + Mod Y or Nunchuk C button.
     // Remove inputs.w if using W as Up
