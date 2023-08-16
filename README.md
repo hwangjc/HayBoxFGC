@@ -69,7 +69,7 @@ The recommended cable for playing Melee netplay is the USB-C to USB-A.
 
 ## Smash Ultimate
 
-<img src=".github/images/default.png" alt="Melee Layout" />
+<img src=".github/images/ult-layout.png" alt="Ultimate Layout" />
 
 Smash Ultimate Layout
 
