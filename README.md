@@ -52,9 +52,36 @@ The recommended cable for playing Melee netplay is the USB-C to USB-A.
 
 ### Dolphin/Slippi Setup
 
-To set up your controller to play on Slippi, download the HayBox Slippi Profile zip folder from releases on this page. Open Slippi Launcher, and click on the settings button at the top right corner of the window. Click on "Netplay", and open the settings folder. Drag and drop the unzipped HayBox Slippi Profile into that folder. Alternatively, you could copy .ini file from the dolphin folder within HayBox to the folder ```<YourDolphinInstallation>\User\Config\Profiles\GCPad\``` (create it if it does not exist). 
+- Step 1:
 
-Once that's done, launch Dolphin. If you do not already have this set by default, go to "Game" in the Slippi launcher settings, and click on "Launch Dolphin". Close that and click the Play button on the main window of the Slippi Launcher. From Dolphin, click on "Controllers", click "Configure" for port 1 (Standard Controller), and under Profile, HayBox should be listed. Click on HayBox, load and save it. For more detailed instructions, see the original HayBox repo. 
+Go to Slippi settings 
+
+<img src=".github/images/dolphin1.png" alt="Dolphin step 1" />
+
+- Step 2:
+
+Go to “netplay” and then click on “open settings folder”.
+
+<img src=".github/images/dolphin2.png" alt="Dolphin step 2" />
+
+- Step 3
+  
+Extract “User” from releases and drag and drop “User” in the root of netplay.
+
+<img src=".github/images/dolphin3.png" alt="Dolphin step 3" />
+
+- Step 4
+  
+Launch Dolphin, go to “controllers”, set Port 1 to “standard controller”, and click on “configure”.
+
+<img src=".github/images/dolphin4.png" alt="Dolphin step 4" />
+
+- Step 5
+
+Change the device to “Xinput gamepad” and then load “HayBox_Xinput” for Windows or “HayBox_Dinput” for MacOS.
+
+<img src=".github/images/dolphin5.png" alt="Dolphin step 5" />
+
 
 ## Project M/Project+
 <img src=".github/images/pm.png" alt="PM/P+ Layout" />
