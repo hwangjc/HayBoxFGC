@@ -37,7 +37,6 @@ Major changes from HayBox:
 
 
 
-
 ## Melee
 
 <img src=".github/images/default.png" alt="Melee Layout" />
@@ -70,7 +69,9 @@ The recommended cable for playing Melee netplay is the USB-C to USB-A.
 
 ## Smash Ultimate
 
-The layout for Smash Ultimate mode is the same as Melee mode, except MS and LS are disabled.
+<img src=".github/images/ult-layout.png" alt="Ultimate Layout" />
+
+Smash Ultimate Layout
 
 To switch to Smash Ultimate mode when you're in any other mode, hold:
 - Mod X + Start + Down
