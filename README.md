@@ -56,37 +56,44 @@ The recommended cable for playing Melee netplay is the USB-C to USB-A.
 
 Go to Slippi settings 
 
-<img src=".github/images/dolphin1.png" alt="Dolphin step 1" />\
+<img src=".github/images/dolphin1.png" alt="Dolphin step 1" />
 
+<br>
 
 
 - Step 2:
 
 Go to “netplay” and then click on “open settings folder”.
 
-<img src=".github/images/dolphin2.png" alt="Dolphin step 2" />\
+<img src=".github/images/dolphin2.png" alt="Dolphin step 2" />
 
+<br>
 
 
 - Step 3:
   
 Download “User.zip” from releases, unzip the folder, and drag and drop “User” in the root of netplay.
 
-<img src=".github/images/dolphin3.png" alt="Dolphin step 3" />\
+<img src=".github/images/dolphin3.png" alt="Dolphin step 3" />
+
+<br>
 
 - Step 4:
   
 Launch Dolphin, go to “controllers”, set Port 1 to “standard controller”, and click on “configure”.
 
-<img src=".github/images/dolphin4.png" alt="Dolphin step 4" />\
+<img src=".github/images/dolphin4.png" alt="Dolphin step 4" />
 
+<br>
 
 
 - Step 5:
 
 Change the device to “Xinput gamepad” and then load “HayBox_Xinput” for Windows or “HayBox_Dinput” for MacOS.
 
-<img src=".github/images/dolphin5.png" alt="Dolphin step 5" />\
+<img src=".github/images/dolphin5.png" alt="Dolphin step 5" />
+
+<br>
 
 
 ## Project M/Project+
