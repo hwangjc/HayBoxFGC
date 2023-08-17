@@ -58,25 +58,31 @@ Go to Slippi settings
 
 <img src=".github/images/dolphin1.png" alt="Dolphin step 1" />
 
+
+
 - Step 2:
 
 Go to “netplay” and then click on “open settings folder”.
 
 <img src=".github/images/dolphin2.png" alt="Dolphin step 2" />
 
-- Step 3
+
+
+- Step 3:
   
 Extract “User” from releases and drag and drop “User” in the root of netplay.
 
 <img src=".github/images/dolphin3.png" alt="Dolphin step 3" />
 
-- Step 4
+- Step 4:
   
 Launch Dolphin, go to “controllers”, set Port 1 to “standard controller”, and click on “configure”.
 
 <img src=".github/images/dolphin4.png" alt="Dolphin step 4" />
 
-- Step 5
+
+
+- Step 5:
 
 Change the device to “Xinput gamepad” and then load “HayBox_Xinput” for Windows or “HayBox_Dinput” for MacOS.
 
