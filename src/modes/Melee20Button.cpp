@@ -44,7 +44,7 @@ void Melee20Button::UpdateDigitalOutputs(InputState &inputs, OutputState &output
     outputs.start = inputs.start;
 
     // Activate D-Pad layer by holding Mod X + Mod Y or Nunchuk C button. 
-    // Remove inputs.w if using that as Up.
+    // Remove inputs.w if using that as Up (WASD disabled)
     if ((inputs.mod_x && inputs.mod_y) || inputs.nunchuk_c || inputs.w) {
         outputs.dpadUp = inputs.c_up;
         outputs.dpadDown = inputs.c_down;
