@@ -154,9 +154,21 @@ The recommended cable for playing Smash 64 on PC is the USB-C to USB-A cable. Yo
 
 ## Customisation
 
-### Flashing New Firmware
+### Updating Your Controller
 
-To upload new versions of firmware for your controller, hold Start on plugin to your PC. A new folder should pop up in which you can drag and drop a new firmware .uf2 file into.r3
+- Step 1:
+  Download the update from [here](https://github.com/ramirc5/HayBoxFGC/releases) and come back to these instructions.
+
+- Step 2:
+Hold down the start button and plug your controller into your computer.
+
+- Step 3:
+  Drag and drop the .uf2 file you got from the releases page into the folder called RPI-RP2
+  
+<img src=".github/images/flashing.png" alt="Flashing firmware" />
+
+Your controller has now been updated and you are ready to play.
+
 
 ### Layouts
 
