@@ -122,6 +122,12 @@ void setup() {
             primary_backend->SetGameMode(
                 new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = false })
                 //new FgcMode(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL)
+                /*
+                new ProjectM(
+                    socd::SOCD_2IP_NO_REAC,
+                    { .true_z_press = false, .ledgedash_max_jump_traj = true }
+                )
+                */
             );
         }
     } else {
@@ -131,6 +137,12 @@ void setup() {
                 primary_backend->SetGameMode(
                     new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = false })
                     //new Ultimate(socd::SOCD_2IP)
+                    /*
+                    new ProjectM(
+                        socd::SOCD_2IP_NO_REAC,
+                        { .true_z_press = false, .ledgedash_max_jump_traj = true }
+                    )
+                    */
                 );
         } else if (console == ConnectedConsole::N64) {
             primary_backend = new N64Backend(input_sources, input_source_count, pinout.joybus_data);
@@ -143,7 +155,6 @@ void setup() {
         backends = new CommunicationBackend *[backend_count] { primary_backend };
     }
 
-    // Default to Melee mode.
     
 }
 
