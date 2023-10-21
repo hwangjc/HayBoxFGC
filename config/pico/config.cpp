@@ -120,8 +120,8 @@ void setup() {
                 primary_backend, new B0XXInputViewer(input_sources, input_source_count)
             };
             primary_backend->SetGameMode(
-                //new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = false })
-                new FgcMode(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL)
+                new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = false })
+                //new FgcMode(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL)
                 /*
                 new ProjectM(
                     socd::SOCD_2IP_NO_REAC,
@@ -135,8 +135,8 @@ void setup() {
             primary_backend =
                 new GamecubeBackend(input_sources, input_source_count, pinout.joybus_data);
                 primary_backend->SetGameMode(
-                    //new Melee20Button(socd::SOCD_NEUTRAL, { .crouch_walk_os = false })
-                    new Ultimate(socd::SOCD_2IP)
+                    new Melee20Button(socd::SOCD_NEUTRAL, { .crouch_walk_os = false })
+                    //new Ultimate(socd::SOCD_2IP)
                     /*
                     new ProjectM(
                         socd::SOCD_2IP_NO_REAC,
