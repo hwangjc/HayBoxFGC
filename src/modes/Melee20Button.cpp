@@ -100,11 +100,10 @@ void Melee20Button::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs
         if (directions.diagonal && shield_button_pressed) {
             // MX + L, R, LS, and MS + q1/2/3/4 = 6375 3750 = 51 30
             // Multiply and divide values by 125
-             
             outputs.leftStickX = 128 + (directions.x * 51);
-            outputs.leftStickY = 128 + (directions.y * 30); 
-        /*
-             // Optimal Marth angles allowing for coming RNG angle nerf
+            outputs.leftStickY = 128 + (directions.y * 30);
+
+            /* // Optimal Marth angles allowing for coming RNG angle nerf
                 // (-0.6375, (-0.3375), 27.9 deg) 
                 outputs.leftStickX = 128 + (directions.x * 51);
                 outputs.leftStickY = 128 + (directions.y * 27);
@@ -188,12 +187,11 @@ void Melee20Button::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs
             outputs.leftStickY = 128 + (directions.y * 70);
             // MY + L, R, LS, and MS + q3/4 = 5000 8500 = 40 68
             if (directions.y == -1) {
-                
                 outputs.leftStickX = 128 + (directions.x * 40);
                 outputs.leftStickY = 128 + (directions.y * 68);
 
                 /* // Optimal Marth angles allowing for coming RNG angle nerf
-                //(-0.5375, -0.8250), 56.92 deg
+                //(-0.5375, -0.8250), 57.9 ish deg
                 outputs.leftStickX = 128 + (directions.x * 42);
                 outputs.leftStickY = 128 + (directions.y * 68);
                 */
