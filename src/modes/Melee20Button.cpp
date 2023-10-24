@@ -191,9 +191,9 @@ void Melee20Button::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs
                 outputs.leftStickY = 128 + (directions.y * 68);
 
                 /* // Optimal Marth angles allowing for coming RNG angle nerf
-                //(-0.5375, -0.8250), 57.9 ish deg
-                outputs.leftStickX = 128 + (directions.x * 42);
-                outputs.leftStickY = 128 + (directions.y * 68);
+                //(-0.5375, -0.8250), 56.92 deg
+                outputs.leftStickX = 128 + (directions.x * 43);
+                outputs.leftStickY = 128 + (directions.y * 66);
                 */
 
             }
