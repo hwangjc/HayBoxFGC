@@ -50,11 +50,6 @@ void Melee20Button::UpdateDigitalOutputs(InputState &inputs, OutputState &output
         outputs.dpadLeft = inputs.c_left;
         outputs.dpadRight = inputs.c_right;
     }
-
-    if (inputs.select)
-        outputs.dpadLeft = true;
-    if (inputs.home)
-        outputs.dpadRight = true;
 }
 
 void Melee20Button::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
