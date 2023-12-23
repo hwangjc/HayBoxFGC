@@ -23,7 +23,7 @@ void WingmanFgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outpu
     outputs.dpadUp = inputs.mod_x;
 
     // Menu keys
-    outputs.select = inputs.c_left;
+    outputs.capture = inputs.c_left;
     //function layer
     if (inputs.mod_y){
         outputs.home = inputs.start;

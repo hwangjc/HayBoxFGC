@@ -69,6 +69,7 @@ typedef struct outputstate {
     bool dpadRight = false;
     bool leftStickClick = false;
     bool rightStickClick = false;
+    bool capture = false;
 
     // Analog outputs.
     uint8_t leftStickX = 128;

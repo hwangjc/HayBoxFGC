@@ -39,7 +39,7 @@ void Melee20Button::UpdateDigitalOutputs(InputState &inputs, OutputState &output
         outputs.triggerLDigital = inputs.nunchuk_z;
     } else {
         outputs.triggerLDigital = inputs.l;
-    }
+    } 
     outputs.triggerRDigital = inputs.r;
     outputs.start = inputs.start;
 

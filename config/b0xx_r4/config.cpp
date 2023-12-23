@@ -16,6 +16,8 @@
 #include "joybus_utils.hpp"
 #include "modes/Melee20Button.hpp"
 #include "stdlib.hpp"
+#include "modes/WingmanFgcMode.hpp"
+
 
 #include <pico/bootrom.h>
 
@@ -116,8 +118,8 @@ void setup() {
             primary_backend = new NintendoSwitchBackend(input_sources, input_source_count);
             backends = new CommunicationBackend *[backend_count] { primary_backend };
 
-            // Default to Ultimate mode on Switch.
-            primary_backend->SetGameMode(new Ultimate(socd::SOCD_2IP));
+            // Default to FGC mode on Switch.
+            primary_backend->SetGameMode(new WingmanFgcMode(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL));
             return;
         } else if (button_holds.z) {
             // If no console detected and Z is held on plugin then use DInput backend.
