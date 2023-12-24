@@ -19,12 +19,12 @@ FgcMode::FgcMode(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
 }
 
 void FgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
-    // Directions
+    // Directions - Same layout as Melee directions
+    // Note that "Up" is on the Right hand bottom row
     outputs.dpadLeft = inputs.left;
     outputs.dpadRight = inputs.right;
     outputs.dpadDown = inputs.down;
-    outputs.dpadUp = inputs.mod_x;
-    //outputs.dpadUp = inputs.w
+    outputs.triggerLDigital = inputs.l;
 
     // Menu keys
     outputs.select = inputs.c_left;
@@ -34,21 +34,20 @@ void FgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     } else {
         outputs.start = inputs.start;
     }
-    outputs.leftStickClick = inputs.a;
-    outputs.rightStickClick = inputs.c_up;
-
+    outputs.leftStickClick = inputs.mod_x;
+    outputs.rightStickClick = inputs.a;
 
     // Right hand bottom row
     outputs.a = inputs.b;
     outputs.b = inputs.x;
     outputs.triggerRDigital = inputs.z;
-    outputs.triggerLDigital = inputs.up;
+    outputs.dpadUp = inputs.up;
 
     // Right hand top row
     outputs.x = inputs.r;
     outputs.y = inputs.y;
-    outputs.buttonR = inputs.lightshield;
-    outputs.buttonL = inputs.midshield;
+    outputs.buttonL = inputs.lightshield;
+    outputs.buttonR = inputs.midshield;
 }
 
 void FgcMode::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
